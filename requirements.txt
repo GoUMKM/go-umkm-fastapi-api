@@ -5,3 +5,4 @@ numpy<2.0
 tflite-runtime
 pydantic
 scikit-learn
+pandas
