@@ -1,6 +1,7 @@
 fastapi
 uvicorn
 joblib
-tflite-runtime
+numpy<2.0
+tflite-runtime==2.5.0 
 pydantic
 scikit-learn
