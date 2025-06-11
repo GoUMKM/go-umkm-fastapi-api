@@ -20,8 +20,8 @@ def load_model():
     preprocessor = joblib.load("app/model/artifacts/preprocessor.joblib")
 
     # Load user data
-    umkm_df = pd.read_csv("app/model/data/umkm.csv")
-    investor_df = pd.read_csv("app/model/data/investor.csv")
+    umkm_df = pd.read_csv("app/model/data/umkm_data.csv")
+    investor_df = pd.read_csv("app/model/data/investor_data.csv")
     users_df = pd.concat([
         umkm_df.drop(columns=["umkm_id"]),
         investor_df.drop(columns=["investor_id"])
