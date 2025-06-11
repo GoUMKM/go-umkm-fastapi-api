@@ -1,5 +1,4 @@
 fastapi
 uvicorn
 joblib
-tflite-runtime==2.12.0
-pydantic
+tflite-runtime
