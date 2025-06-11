@@ -1,20 +1,23 @@
-from fastapi import FastAPI
-from app.schemas.request_response import RecommendRequest
-from app.model.recommender import get_recommendations  # pastikan fungsi ini ada
+from fastapi import FastAPI, HTTPException
+from app.model import recommender
 
-app = FastAPI()
+app = FastAPI(title="Go-UMKM Recommendation API")
 
-@app.post("/recommend")
-def recommend(request: RecommendRequest):
+# Load model saat startup
+@app.on_event("startup")
+def load():
+    recommender.load_model()
+
+@app.get("/")
+def root():
+    return {"message": "Go-UMKM Recommendation API is running."}
+
+@app.get("/recommend/{user_id}")
+def recommend(user_id: str, k: int = 5):
     try:
-        result = get_recommendations(
-            user_id=request.user_id,
-            cosine_sim=cosine_sim,
-            users_df=users_df,
-            umkm_data=umkm_df,
-            investor_data=investor_df,
-            k=request.top_k
-        )
-        return {"recommendations": result.to_dict(orient="records")}
+        results = recommender.get_recommendations(user_id=user_id, k=k)
+        if isinstance(results, dict) and "error" in results:
+            raise HTTPException(status_code=404, detail=results["error"])
+        return {"user_id": user_id, "recommendations": results}
     except Exception as e:
-        return {"error": str(e)}
+        raise HTTPException(status_code=500, detail=str(e))
