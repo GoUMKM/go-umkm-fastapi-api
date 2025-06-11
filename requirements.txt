@@ -3,4 +3,3 @@ uvicorn
 joblib
 tflite-runtime
 pydantic
-tensorflow
