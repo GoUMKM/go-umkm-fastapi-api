@@ -48,8 +48,9 @@ API ini **telah berhasil dideploy ke Heroku** dan siap digunakan dalam sistem fr
 API ini telah dideploy ke Heroku dan bisa langsung digunakan pada URL berikut:
 
 **Base URL**:  
-`https://umkm-fastapi-heroku-496b36a59a51.herokuapp.com`
-
+```
+https://umkm-fastapi-heroku-496b36a59a51.herokuapp.com
+```
 ---
 
 ## Endpoint
