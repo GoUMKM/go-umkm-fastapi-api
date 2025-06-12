@@ -43,7 +43,7 @@ API ini **telah berhasil dideploy ke Heroku** dan siap digunakan dalam sistem fr
 
 ---
 
-## 🚀 Deployment
+## Deployment
 
 API ini telah dideploy ke Heroku dan bisa langsung digunakan pada URL berikut:
 
