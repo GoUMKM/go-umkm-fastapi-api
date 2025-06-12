@@ -1,4 +1,4 @@
-# Go-UMKM Recommendation API 🚀
+# Go-UMKM Recommendation API
 
 API ini dibuat menggunakan **FastAPI** untuk memberikan **rekomendasi antara UMKM dan investor** berdasarkan profil mereka menggunakan model pembelajaran mesin yang telah dilatih dan dikonversi ke format **TensorFlow Lite (TFLite)**.
 
