@@ -218,16 +218,3 @@ https://umkm-fastapi-heroku-496b36a59a51.herokuapp.com/docs
 ```
 
 ---
-
-## Kontribusi
-
-Kontribusi sangat terbuka untuk:
-
-* Menambahkan fitur filter rekomendasi
-* Membuat frontend interface
-* Meningkatkan kualitas model
-
----
-
-
-
